@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to V4!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #005335;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px 20px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      font-size: 3.5em;
+      margin: 0 0 16px;
+      color: inherit;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.4;
+      margin: 0.8em 0;
+      color: inherit;
+      letter-spacing: 0.3px;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .btn {
+      display: inline-block;
+      min-width: 200px;
+      padding: 16px 36px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #fff;
+      background: #D32F2F;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    .btn:hover {
+      background: #B71C1C;
+      transform: translateY(-2px);
+    }
+
+    /* EASTER-EGG STYLES */
+    #easter-egg {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      color: #005335;
+      border: 3px solid #D32F2F;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    #easter-egg h2 {
+      margin-top: 0;
+      font-size: 2em;
+    }
+    #easter-egg img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    #easter-egg button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background: #D32F2F;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #easter-egg button:hover {
+      background: #B71C1C;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to V4!</h1>
+
+    <p>
+      This is the V4 UAT page – it’ll be changing a lot as we create, test and amend things over time, 
+      so don’t worry too much if things aren’t where you’d expect.
+    </p>
+
+    <p>
+      The V4 UAT page has been created by dumping a snapshot of what we used on V3 into the new version, 
+      so you’ll see lots of broken pages, links that take you back to V3 and a bunch of other weird things… 
+      But that’s fine, that’s the whole point!
+    </p>
+
+    <p>
+      If you’re on V4 by mistake and want to go back to V3, you can do that by clicking the button below:
+    </p>
+
+    <div class="buttons">
+      <a href="https://www.thehbhub.com/" class="btn" target="_blank" rel="noopener">
+        Take Me To V3!
+      </a>
+    </div>
+
+    <p>
+      If you need an account making with specific permissions, no problem, just message James Hopkins on Teams 
+      and he’ll set you up.
+    </p>
+
+    <p>
+      If you find any bugs, any issues or just have questions on how to do something, pop them in this spreadsheet:
+    </p>
+
+    <div class="buttons">
+      <a href="V4Feedback.xlsx" class="btn" download>
+        Give Feedback!
+      </a>
+    </div>
+  </div>
+
+  <!-- HIDDEN EASTER EGG -->
+  <div id="easter-egg">
+    <h2>🎉 You Found It! 🎉</h2>
+    <img
+      src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIWFRUVFRUWFRUVFRUVFRUVFxUWGBcVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lICUtLS0tLS0tLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKMBNgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgABB//EADQQAAIBAwMCAwcEBgIDAAAAAAECAwAEEQUSITEGEyJBYXGBMpEUI0JSscHh8BUjYnKCksLw/8QAGgEAAwEBAQEAAAAAAAAAAAAAAwQFAgYBBv/EACkRAAICAgEEAQMFAAAAAAAAAAABAhEDBBIhMUFRYQUTIjKBkaHB8P/aAAwDAQACEQMRAD8A/XNV0VV1dlYKUnUFVShuICqAQCqAkBxTcM7LAxPBOECUVIT+5JI3uA6u03lrSUd1M6k6JX+I87yEroNpmXn1st1FGv6VId1G7z2sygqb0xNqF+lyCPD+C6F6o1VQoE4nCys8wV/CS3lksz+QlRj7i5VDFivt7x/GuO/wDfA+9Ek82Tu51Xx9GU7n+zW+EXo3FCYOQumFKZEPpUh9oqmettgsbqMe4MbHdcZw2D433UFS3oylPPvj3LRyvMlR5J40noOUhGkOGISgARU8joSvR5diW7cQrj+wxwXhMRhLZ3Ntm45y7UySC3xY2kV4m3iandta8cMjuQ0p2acbI0x+j3LFJ2FrsNebt3YMb3lURKSOi1fZbU6SyK1qLVzSpNasNnQdUsq9dxzxPWWLjY3nKdeqNFrrrgXdGg2bZzhc5r7jThlVHhDqtvHRj0pfI+yZhvlIVlSIFUHy6aWKhf/9k="
+      alt="Secret Image"
+    />
+    <p>Congratulations, you’ve unlocked the secret Easter egg of V4!</p>
+    <button onclick="document.getElementById('easter-egg').style.display='none'">
+      Close
+    </button>
+  </div>
+
+  <script>
+    // KONAMI-CODE EASTER EGG
+    const code = [38,38,40,40,37,39,37,39,66,65];
+    let idx = 0;
+    document.addEventListener('keydown', e => {
+      if (e.keyCode === code[idx]) {
+        idx++;
+        if (idx === code.length) {
+          document.getElementById('easter-egg').style.display = 'block';
+          idx = 0;
+        }
+      } else {
+        idx = 0;
+      }
+    });
+  </script>
+</body>
+</html>
